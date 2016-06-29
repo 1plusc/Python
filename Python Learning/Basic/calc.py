@@ -9,3 +9,7 @@ ing declared; see http://python.org/dev/peps/pep-0263/ for details
 from __future__ import division
 
 print 1/2 #利用future这个特性，证明1/2不为0
+
+#导入精确除法后，若要执行截断除法，可以使用"//"操作符：
+print 3/4  #0.75
+print 3//4 #0
