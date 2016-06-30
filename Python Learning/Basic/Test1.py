@@ -14,3 +14,19 @@ print 1/2 #利用future这个特性，证明1/2不为0
 print 3/4  #0.75
 print 3//4 #0 //双斜线实现整除
 print 3.0//4.0
+#取余
+print 10%3
+#求幂
+print 2**3
+print pow(2,4)
+print pow(2,4,15)#相当于(2**4)%15
+"""
+    pow(x, y[, z]) -> number
+
+    With two arguments, equivalent to x**y.  With three arguments,
+    equivalent to (x**y) % z, but may be more efficient (e.g. for longs).
+    """
+#if语句
+minutes=60
+if minutes%60==0:print 'time is dead'
+else:print'time not dead'
