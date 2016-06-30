@@ -52,3 +52,5 @@ else:print'time not dead'
 #获得用户输入
 user_name=raw_input("what is your name?")
 print "hello ,"+user_name+" !"
+print "let's go"
+print 'let\'s go'
