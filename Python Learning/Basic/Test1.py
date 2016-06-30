@@ -52,5 +52,29 @@ else:print'time not dead'
 #获得用户输入
 user_name=raw_input("what is your name?")
 print "hello ,"+user_name+" !"
+"""
+raw_input([prompt]) -> string
+
+Read a string from standard input.  The trailing newline is stripped.
+If the user hits EOF (Unix: Ctl-D, Windows: Ctl-Z+Return), raise EOFError.
+On Unix, GNU readline is used if enabled.  The prompt string, if given,
+is printed without a trailing newline before reading.
+"""
 print "let's go"
 print 'let\'s go'
+
+print repr("hell")
+print str("hell")
+print "The minutes is "+'minutes' #此处为单引号，则不能正确显示 #The minutes is minutes
+print "The minutes is "+`minutes`  #此处需要反引号，才能识别变量 #The minutes is 60
+print "The minutes is "+repr(minutes) #The minutes is 60
+print "The minutes is "+str(minutes) #The minutes is 60
+
+school=input("what is your school ?")#此处用户需要输入数字或者有值的变量或者带引号的字符串d
+print "The School is "+repr(school)+"!"
+#跨多行字符串
+print '''
+Hello,
+My School is in China,\
+welcome to China !
+'''
