@@ -78,3 +78,5 @@ Hello,
 My School is in China,\
 welcome to China !
 '''
+
+print r"C:\nowhere"#原始字符串
