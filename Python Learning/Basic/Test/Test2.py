@@ -37,4 +37,7 @@ print tag[9:30]
 numbers=[1,2,3,4,5,6,7,8,9,10]
 print numbers[3:6]
 print numbers[-3:-1]
+print numbers[-3:]#最后3个元素
+print numbers[:3]#前面3个元素
+
 
