@@ -32,6 +32,9 @@ print month_name+" "+ordinal+"."+year #July 2nd.2016
 
 #分片
 tag='<a href="https://github.com/1plusc" value="oneplusc">'
+print tag[1:5] #提取部分的第一个元素编号，后面为剩余部分的第一个元素编号
 print tag[9:30]
-
+numbers=[1,2,3,4,5,6,7,8,9,10]
+print numbers[3:6]
+print numbers[-3:-1]
 
