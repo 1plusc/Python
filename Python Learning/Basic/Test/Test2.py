@@ -40,4 +40,29 @@ print numbers[-3:-1]
 print numbers[-3:]#最后3个元素
 print numbers[:3]#前面3个元素
 
+#对http://www.github.com形式的URL进行分割
+url=raw_input('Please enter the URL : ')
+domain=url[11:-4]
+print "Domain name is "+domain
 
+#步长的设置
+print numbers[0:10:1]
+print numbers[0:10:2]#每隔1个元素输出
+print numbers[::2]
+#步长为负数则是从右到左提取元素
+print numbers[::-1]#[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+print numbers[8:1:-2]#[9, 7, 5, 3]
+print numbers[:2:-1]#[10, 9, 8, 7, 6, 5, 4]
+
+#序列相加
+print [1,2,3]+[4,5,6]#[1, 2, 3, 4, 5, 6]
+print "hello,"+"world !"
+
+'''
+>>> print [1,2,3]+"hellpo"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate list (not "str") to list
+'''
+sequence=[None]*10
+print sequence
