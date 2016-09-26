@@ -8,15 +8,22 @@ import socket
 fin=open('all_IP_Port.txt','r')
 fout=open(r'allvalid_IP_Port.txt','w')
 FLAG=False
+NUMBER=0
 def get_info(str):
 	global FLAG
+	global NUMBER
 	strn=str.split(":")
 	sk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	sk.settimeout(1)
 	try:
-		sk.connect(strn[0],strn[1])
-		print 'Server port OK!'
-		FLAG=True
+		if (int(strn[1])==80 or (int(strn[1])<=9000 and int(strn[1])>=8000)):
+			print strn[1]
+			sk.connect(strn[0],strn[1])
+			print 'Server port OK!'
+			FLAG=True
+		else:
+			FLAG=True
+		NUMBER+=1
 	except Exception:
 		print 'Server port not connect!'
 		FLAG=False
@@ -24,18 +31,16 @@ def get_info(str):
 
 while True:
 	line = fin.readline()
-	print line
-	print line[0]
 	if line[0]!="H":
 		line=line.strip()
 		get_info(line)
 		if FLAG:
-			print "The IP Merge Port is :"+IP+":"+PORT
-			fout.write(IP+":"+PORT+"\r\n")
+			fout.write(line+"\r\n")
 		else:
 			"此处预留"
 	else:
 		break
 
+fout.write("Here have "+str(NUMBER)+" Valid IP ,thank you for use")
 fin.close()
 fout.close()
