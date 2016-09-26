@@ -1,5 +1,6 @@
 #coding:utf-8
 # Author:MRYE
+# Date:2016-09-26 23:17
 # Github:https://github.com/1plusc
 #根据御剑扫描日志整理如IP:Port格式如(10.10.10.10:8080)
 f = open("PortScan-100.txt", "r")
